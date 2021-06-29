@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@aixs141C:1523/ORA141C
+    username: ime_recast_be
+    password: a1be246dcf
