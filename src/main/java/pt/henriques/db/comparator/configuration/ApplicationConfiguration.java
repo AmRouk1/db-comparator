@@ -1,14 +1,20 @@
 package pt.henriques.db.comparator.configuration;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.*;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableJpaRepositories(ApplicationConfiguration.APPLICATION_BASE_PACKAGE)
-@EntityScan(ApplicationConfiguration.APPLICATION_BASE_PACKAGE)
-@EnableTransactionManagement
+//@EnableJpaRepositories(ApplicationConfiguration.APPLICATION_BASE_PACKAGE)
+//@EntityScan(ApplicationConfiguration.APPLICATION_BASE_PACKAGE)
+//@EnableTransactionManagement
+
+@SpringBootApplication(exclude = {
+	    DataSourceAutoConfiguration.class,
+	    DataSourceTransactionManagerAutoConfiguration.class,
+	    HibernateJpaAutoConfiguration.class
+	})
 public class ApplicationConfiguration {
 
 	static final String APPLICATION_BASE_PACKAGE = "pt.henriques.db.comparator";

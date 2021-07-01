@@ -1,4 +1,4 @@
-package pt.henriques.db.comparator.model;
+package pt.henriques.db.comparator.model.table.constraint;
 
 import java.io.Serializable;
 
@@ -7,8 +7,10 @@ import lombok.*;
 @SuppressWarnings("serial")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor @EqualsAndHashCode
-public class ColumnStructureId implements Serializable {
+public class ColumnConstraintReferenceId implements Serializable {
 
+	private String name;
+	private String ownerName;
 	private String tableName;
 	private String columnName;
 }

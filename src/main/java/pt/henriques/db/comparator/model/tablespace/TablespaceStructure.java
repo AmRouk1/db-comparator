@@ -1,4 +1,4 @@
-package pt.henriques.db.comparator.model;
+package pt.henriques.db.comparator.model.tablespace;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter @Setter
 @Builder @NoArgsConstructor @AllArgsConstructor
-public class Tablespace {
+public class TablespaceStructure {
 
 	private String name;
 
